@@ -18,3 +18,8 @@ Route::get('/', function () {
 });
 
 Route::post('/order', 'OrdersController@store');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
