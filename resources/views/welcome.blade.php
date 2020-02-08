@@ -16,9 +16,36 @@
       <img src="img/image14.png" alt="">
     </div>
 
+    @if(!empty($successMsg))
+        <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+        لقد تم تسجيل طلبكم بنجاح , كويك فيت تشكركم على ثقتكم.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    @endif
+
+
     <div class="container-fluid m-0 p-2 row">
       <div class="col-12 col-md-6 text-center order-2 order-md-1 p-2">
-        <h1>CountDown</h1>
+        <div id="clockdiv" class="border bg-light">
+            <div>
+              <span class="days">1</span>
+              <div class="smalltext">Jrs</div>
+            </div>
+            <div>
+              <span class="hours">2</span>
+              <div class="smalltext">Hr</div>
+            </div>
+            <div>
+              <span class="minutes"></span>
+              <div class="smalltext">Min</div>
+            </div>
+            <div>
+              <span class="seconds"></span>
+              <div class="smalltext">Sec</div>
+            </div>
+          </div>
       </div>
       <div class="col-12 col-md-6 text-center order-1 order-md-2 p-2">
         <h1>سينتهي العرض بعد</h1>
@@ -30,7 +57,7 @@
 
     <div class="container-fluid m-0 p-0 image d-none d-md-block formDiv">
       <img src="img/firstImage.png" alt="">
-      <div class="mr-auto formO ">
+      <div class="mr-auto formO">
         <form action="/order" class="w-100 w-md-50 p-5 border rounded bg-light" method="POST">
             @csrf
           <div class="form-group text-right">
@@ -98,16 +125,33 @@
     </div>
 
     <div class="container-fluid m-0 p-2 row">
-      <div class="col-12 col-md-6 text-center">
-        <h1>CountDown</h1>
+        <div class="col-12 col-md-6 text-center order-2 order-md-1 p-2">
+          <div id="clockdiv" class="border bg-light">
+              <div>
+                <span class="days">1</span>
+                <div class="smalltext">Jrs</div>
+              </div>
+              <div>
+                <span class="hours">2</span>
+                <div class="smalltext">Hr</div>
+              </div>
+              <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Min</div>
+              </div>
+              <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Sec</div>
+              </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 text-center order-1 order-md-2 p-2">
+          <h1>سينتهي العرض بعد</h1>
+        </div>
+        <div class="col-12 text-center order-3 p-3 d-block d-sm-block d-md-none">
+          <a href="#orderForm" class="btn btn-warning w-50">أطلب الأن</a>
+        </div>
       </div>
-      <div class="col-12 col-md-6 text-center float-right">
-        <h1>سينتهي العرض بعد</h1>
-      </div>
-      <div class="col-12 col-md-6 text-center p-3 d-block d-sm-block d-md-none">
-        <a href="#orderForm" class="btn btn-warning pr-4 pl-4">أطلب الأن</a>
-      </div>
-    </div>
 
     <div class="container-fluid m-0 p-0 image d-block d-md-none">
       <img src="img/image16.png" alt="">
@@ -174,16 +218,33 @@
     </div>
 
     <div class="container-fluid m-0 p-2 row">
-      <div class="col-12 col-md-6 text-center order-2 order-md-1 p-2">
-        <h1>CountDown</h1>
+        <div class="col-12 col-md-6 text-center order-2 order-md-1 p-2">
+          <div id="clockdiv" class="border bg-light">
+              <div>
+                <span class="days">1</span>
+                <div class="smalltext">Jrs</div>
+              </div>
+              <div>
+                <span class="hours">2</span>
+                <div class="smalltext">Hr</div>
+              </div>
+              <div>
+                <span class="minutes"></span>
+                <div class="smalltext">Min</div>
+              </div>
+              <div>
+                <span class="seconds"></span>
+                <div class="smalltext">Sec</div>
+              </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 text-center order-1 order-md-2 p-2">
+          <h1>سينتهي العرض بعد</h1>
+        </div>
+        <div class="col-12 text-center order-3 p-3 d-block d-sm-block d-md-none">
+          <a href="#orderForm" class="btn btn-warning w-50">أطلب الأن</a>
+        </div>
       </div>
-      <div class="col-12 col-md-6 text-center order-1 order-md-2 p-2">
-        <h1>سينتهي العرض بعد</h1>
-      </div>
-      <div class="col-12 text-center order-3 p-3 d-block d-sm-block d-md-none">
-        <a href="#orderForm" class="btn btn-warning w-50">أطلب الأن</a>
-      </div>
-    </div>
 
     <div class="container-fluid m-0 p-0 image d-none d-md-block formDiv">
       <img src="img/firstImage.png" alt="">
@@ -214,6 +275,7 @@
     </div>
 
     <!-- Optional JavaScript -->
+    <script src="js/app.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

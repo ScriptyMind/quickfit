@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\OrderMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class OrdersController extends Controller
 {
@@ -19,6 +21,7 @@ class OrdersController extends Controller
         //dd($data);
 
         \App\Order::create($data);
-        return view('welcome');
+        Mail::to('test@test.com')->send(new OrderMail($data));
+        return view('welcome')->with('successMsg','Property is updated .');
     }
 }
